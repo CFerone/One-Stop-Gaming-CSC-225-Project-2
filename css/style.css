@@ -1,0 +1,231 @@
+/* 
+    Use the website "https://jigsaw.w3.org/css-validator/#validate_by_input", to check for errors in the code
+    ALWAYS CHECK FOR ERRORS USING THE ONLINE VALIDATOR !!!
+*/
+
+/*
+    <!-- Courtney Ferone - Project #2 One Stop Gaming Ecommerce Site -->
+
+        Design Direction:
+    Using Bootstrap 5 as a basis, and incorporating the grid system from Bootstrap along with your own custom HTML, 
+		JavaScript and CSS create an e-commerce store. The store should include
+
+	AT LEAST:
+
+	Separate Homepage with at least a hero and a gallery of products
+	Separate About page
+	Separate Product listing page
+	Separate Cart page
+	Separate Checkout page with validation (can use any type of validation you are comfortable with)
+
+	Notes
+
+	Each page must use the grid system and have at least 2 different column configurations.
+	The site MUST be responsive and look good on tablet/mobile/desktop
+	The cart page should have static products in the cart and do not need to be driven based on the catalog page and user 
+		interaction with the site.
+	The checkout page should be a full-blown checkout page and should be a form to obtain all of the necessary information 
+		to fulfill the order (do not collect real credit card data). The form must include validation and must pass the data 
+		via whatever request method you are sending.
+	Directly repurposing any work we do in class will result in not receiving the full grade for creativity.
+	The entire site should have its own look and feel and should not look like it was lifted from the Bootstrap examples page.
+
+	Custom JavaScript is not necessary on this project, but feel free to write custom JavaScript or utilize Bootstrap’s JavaScript 
+		functionality.
+
+	Remember you MUST submit valid HTML, JavaScript, and CSS.
+
+	NOTE ON HOW TO SUBMIT + BONUS POINTS
+	For this project it is optional; however, all future assignments must be submitted as GitHub repositories. We will be 
+		learning GitHub in class prior to this assignment being due, if we’ve not covered it yet.
+	You will receive +20 points if you properly submit it via GitHub. The project should be in its own repository. Please post 
+		the link to your repository in the comment area and if you are unsure of yourself upload a zip of the project as well.
+	When creating the repository you should be set to public. It should _only_ include your project files. It should also be done 
+		using the command prompt NOT the desktop application or drag-n-drop at GitHub account, 
+		http://rogerdudler.github.io/git-guide/ for the reference material. Submit the link to the repository on GitHub for 
+		the assignment, e.g., https://github.com/foobar/barfoo
+*/
+/*
+
+    The below line must be added to the html file to reference this stylesheet: (must be located in the <head>   </head> tag)
+        <link href="css/style.css" rel="stylesheet">
+        link href="css/style.css": Tell the html file to reference the directory (folder) named css and use the style.css file
+        rel="stylesheet": Tell the html file the .css file is a stylesheet
+
+*/
+
+/*
+    Internal links scrolling behavior will be smooth
+*/
+html {
+    scroll-behavior:smooth;
+}
+
+/*
+    My custom "Questrial" font style from Google Fonts
+*/
+body {
+    font-family: 'Questrial', sans-serif;
+}
+
+/*
+    Custom width of 13%
+*/
+.w-13 {
+    width:13%;
+}
+
+/*
+    Custom width of 30%
+*/
+.w-30 {
+    width: 30%;
+}
+
+/*
+    Custom height of 30%
+*/
+.h-30 {
+    width: 30%;
+}
+
+/*
+    Custom font color for the website, links, and links on hover
+*/
+.pinkFont {
+    color: #D36EE5;
+}
+.purpleLinks {
+    color: #784082;
+}
+.purpleLinks:hover {
+    color: #D36EE5;
+}
+
+/*
+	Changing the dropdown item's active background color on click from original bootstrap code
+*/
+.dropdown-item.active, .dropdown-item:active {
+	background: rgba(0,0,0,0.5) !important;
+}
+
+/*
+  Changing the hamburger icon color and border to pink from original bootstrap code
+*/
+.navbar-toggler {
+	color: #D36EE5 !important;
+	border-color: #D36EE5 !important;
+}
+/*
+	Bootstrap uses an image for the toggle icon, therefore I must change the "stroke=" attribute to the color I want: 'rgb(211,110,229)'
+*/
+.navbar-dark .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(211,110,229)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/*
+	Remove the default triangle icon from the dropdown menu list
+*/
+.toggleIconNone .dropdown-toggle::after {
+    display: none !important;
+}
+
+/*
+	Customize font to a smaller size
+*/
+.fontSmall {
+	font-size: 15px;
+}
+
+/*
+	Customize font between small and medium
+*/
+.fontSmMd {
+	font-size: 19px;
+}
+
+/*
+	Customize font to a medium size
+*/
+.fontMedium {
+	font-size: 25px;
+}
+
+/*
+	Customize font to a bigger size
+*/
+.fontBig {
+	font-size: 40px;
+}
+
+/*
+	Define the size and definition of cart item photos
+*/
+.cartImages img {
+	width: 100px;
+	height: 100px;
+	border-radius:0;
+	transition: 0.3s;
+	image-rendering: pixelated;
+}
+/*
+	Cart images zoom on hover
+*/
+.cartImages:hover img {
+	transform: scale(1.1);
+}
+
+/*
+	Define the size and definition of gallery items
+*/
+.galleryImages img {
+	width: 340px;
+	height: 200px;
+	border-radius:0;
+}
+
+/*
+	Define the size and definition of about us images
+*/
+.aboutUsImages img {
+	width: 300px;
+	height: 400px;
+	border-radius: 100%;
+	filter: drop-shadow(8px 8px 10px #383838);
+}
+
+/*
+	Customize border thickness and color
+*/
+.borderStyle {
+	border-width: 10px !important;
+	border-radius: 25px;
+	border-color: #784082 !important;
+}
+
+/*
+	Right to left text color gradient for MasterCard
+*/
+.redOrangeGradient {
+	background-clip: text;
+	background: -webkit-linear-gradient(right, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*
+	Define textarea box size
+*/
+textarea {
+	width: 75%;
+	height: 100%;
+  }
+
+/*
+    Adding margin on top when on mobile
+*/
+@media screen and (max-width:768px) {
+    .mobileMarginTop {
+        margin-top: 20px;
+    }
+}

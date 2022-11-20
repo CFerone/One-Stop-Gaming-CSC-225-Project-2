@@ -1,0 +1,701 @@
+<!-- Use the website "https://validator.w3.org/#validate_by_input", to check for errors in the code -->
+<!-- ALWAYS CHECK FOR ERRORS USING THE ONLINE VALIDATOR !!! -->
+
+<!-- Courtney Ferone - Project #2 One Stop Gaming Ecommerce Site -->
+
+<!DOCTYPE html> <!-- Defines the document to be HTML  -->
+<html lang="en"> <!-- The beginning of our code, attribute "lang" is added to define the language of the page to be "en(English)" -->
+    <head> <!-- The elements in the "head" meta tag do NOT appear under the URL on the page -->
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Google Fonts plugin: "Questrial"-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        <!-- Addition of Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- Adding FontAwesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+                integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+                crossorigin="anonymous" referrerpolicy="no-referrer">
+        <!-- My custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <!-- The <title> appears as the name of the page (shown on the tab) -->
+        <title> One Stop Gaming </title>
+    </head>
+
+    <!-- Flexbox is used to grant certain page effects (like flushing the footer to the bottom of the page) -->
+    <body class="d-flex flex-column min-vh-100">
+        <!-- JavaScript: Bootstrap bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Header -->
+        <header>
+            <!-- Top navbar -->
+            <nav class="navbar bg-light navbar-light">
+                <div class="container justify-content-center">
+                    <!-- Left side -->
+                    <div class="col-lg-5 col-md-2 col-auto">
+                        <ul class="navbar-brand navbar-nav justify-content-sm-start">
+                            <li><i class="fa-solid fa-envelope text-dark"></i> OneStopGaming@gmail.com </li>
+                        </ul>
+                    </div>
+                    <!-- Right side -->
+                    <div class="col-lg-7 col-md-8 col-auto">
+                        <ul class="navbar-brand navbar-nav list-group list-group-horizontal justify-content-sm-end">
+                            <li><i class="fa-solid fa-circle-user text-dark"></i>
+                                <a href="" class="text-decoration-none text-reset me-5"> My account </a></li> 
+                            <li><i class="fa-solid fa-power-off text-dark"></i>
+                                <a href="" class="text-decoration-none text-reset"> Login </a></li> 
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End top navbar-->
+            
+            <!-- Middle header -->
+            <div class="container d-flex justify-content-center col-lg-8 col-md-7 col-12 my-4 w-100" style="height:50px">
+                <!-- Category Selection Menu -->
+                <select class="form-select w-13 me-1">
+                    <option selected="selected" class="text-center"> All Categories </option>
+                    <option value="1" class="text-start"> Keyboards </option>
+                    <option value="2" class="text-start"> Mice </option>
+                    <option value="3" class="text-start"> Headsets </option>
+                    <option value="4" class="text-start"> Monitors </option>
+                    <option value="5" class="text-start"> Controllers </option>
+                </select>
+                <!-- Search by Name -->
+                <div class="input-group rounded w-30 d-flex justify-content-center align-items-center">
+                    <input 
+                        type="search" 
+                        class="form-control rounded text-center"
+                        style="height:50px" 
+                        placeholder="Search Products Here" 
+                        aria-label="Search" 
+                    >
+                    <button type="button" class="btn border px-3 ms-1" style="height:50px">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button> 
+                </div>
+                <!-- Static Shopping Cart -->
+                <nav class="navbar navbar-expand bg-dark navbar-dark ms-2 rounded">
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="container nav navbar-nav navbar-brand toggleIconNone m-0 p-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="#" 
+                                        id="shoppingCartDropdown" 
+                                        role="button"
+                                        data-bs-toggle="dropdown" 
+                                        aria-expanded="false" 
+                                        style="color:#D36EE5">
+                                        <i class="fa-solid fa-cart-shopping"></i><span class="fontSmall"> x2 </span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="shoppingCartDropdown">
+                                        <li class="mx-3 my-2">
+											<a class="cartImages" 
+                                                href="keyboards.html" 
+                                                target="_blank">
+                                                <img src="images/BWChromaV2.jpg" alt="Razer - BlackWidow Chroma V2 Keyboard"></a>
+										    x1 Razer - BlackWidow Chroma V2 = $189.00
+										</li>
+                                        <li class="mx-3 my-2">
+											<a class="cartImages" 
+                                                href="mice.html" 
+                                                target="_blank">
+                                                <img src="images/G502Hero.jpg" alt="Logitech - G502 HERO Mouse"></a>
+											x1 Logitech - G502 HERO = $65.00
+										</li>
+                                        <li>
+                                            <hr><div class="text-center mb-2"> Total = $254.00 </div>
+                                            <div class="container d-flex justify-content-center">
+                                                <a class="btn btn-primary w-30 me-2" 
+                                                    href="cart.html" 
+                                                    role="button"> Cart </a>
+                                                <a class="btn btn-primary w-30 ms-2" 
+                                                    href="checkout.html"                                                
+                                                    role="button"> Checkout </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End shopping cart -->
+            </div>
+            <!-- End middle header -->
+
+            <!-- Bottom navbar -->
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <div class="container">
+                    <!-- Hamburger menu button when collapsed -->
+                    <button 
+                        class="container navbar-toggler w-30"
+                        type="button"
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#bottomNavDropdown"
+                        aria-controls="bottomNavDropdown"
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="bottomNavDropdown">
+                        <ul class="container nav nav-pills navbar-nav navbar-brand justify-content-center align-items-center">
+                            <li class="nav-item">
+                                <a href="index.html"                                   
+                                    class="text-decoration-none me-3 purpleLinks"> 
+                                    Home 
+                                </a>
+                            </li>
+                            <li>   
+                                <a href="about.html"                                    
+                                    class="text-decoration-none me-3 purpleLinks"> 
+                                    About 
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active dropdown-toggle me-3 px-2 text-dark" 
+                                    href="#" 
+                                    id="bottomNavDropdownMenuLink" 
+                                    role="button"
+                                    data-bs-toggle="dropdown" 
+                                    aria-expanded="false" 
+                                    style="background-color:#D36EE5"> 
+                                    Products
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="bottomNavDropdownMenuLink">
+                                    <li><a class="dropdown-item nav-link active" href="#" style="color:#D36EE5"> All Products </a></li>
+                                    <li><a class="dropdown-item" href="keyboards.html" style="color:#D36EE5"> Keyboards </a></li>
+                                    <li><a class="dropdown-item" href="mice.html" style="color:#D36EE5"> Mice </a></li>
+                                    <li><a class="dropdown-item" href="headsets.html" style="color:#D36EE5"> Headsets </a></li>
+                                    <li><a class="dropdown-item" href="monitors.html" style="color:#D36EE5"> Monitors </a></li>
+                                    <li><a class="dropdown-item" href="controllers.html" style="color:#D36EE5"> Controllers </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="cart.html" class="text-decoration-none me-3 purpleLinks"> Cart </a></li>
+                            <li><a href="checkout.html" class="text-decoration-none me-3 purpleLinks"> Checkout </a></li>
+                            <li><a href="contact.html" class="text-decoration-none me-3 purpleLinks"> Contact Us </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End bottom navbar -->
+        </header>
+        <!-- End of header -->
+
+        
+        <!-- Hero Banner -->
+        <img src="images/OneStopGamingBG.png" alt="One Stop Gaming Hero Banner">
+        <!-- End Hero Banner -->
+
+
+        <!-- All Products -->
+        <div class="container mt-3 w-50 align-items-center">
+            <p class="text-center fontBig animate__animated animate__fadeInDown animate__delay-1s shadow-lg border-top borderStyle"> 
+                All Products </p>
+        </div>
+        <!-- Grid of product items -->
+        <div class="container w-78 mb-5 galleryImages fontSmall">
+            <!-- Start of Row 1 -->
+            <div class="row text-center g-0 mb-5">
+                <!-- Column 1 (Keyboard 1) -->
+                <div class="col-md-12 mobileMarginTop mb-5">
+                    <img src="/images/Apex.jpg" alt="Apex Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> SteelSeries - Apex </span>
+                    <br> Unlimited number of profiles to create and store
+                    <br> Unlimited macro creation
+                    <br> Complete button remapping
+                    <br> Analyzed usage via recorded movements and heat-map display
+                    <br> 6 simultaneous key presses of 20 anti ghosting capable gaming keys
+                    <br><span class="text-danger"> List Price: <del> $48.00 </del></span>
+                    <br> Our Price: $32.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 2 (Keyboard 2) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/Apex150.jpg" alt="Apex 150 Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> SteelSeries - Apex 150 </span>
+                    <br> Ultra fast reaction times, tactile feel, and quiet operation
+                    <br> Splash resistant to everyday spills
+                    <br> Guaranteed 20-million click lifespan for lifelong durability
+                    <br> Dynamic five-zone RGB illumination
+                    <br> Real-time Discord in-game lighting notifications
+                    <br><span class="text-danger"> List Price: <del> $49.00 </del></span>
+                    <br> Our Price: $35.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 3 (Keyboard 3) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/ApexM400.png" alt="Apex M400 Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> SteelSeries - Apex M400 </span>
+                    <br> Linear Mechanical Gaming Switches
+                    <br> Reinforced steel back plate construction
+                    <br> Fully-programmable keys & macros
+                    <br> 100% anti-ghosting and 104-key rollover
+                    <br><span class="text-danger"> List Price: <del> $79.00 </del></span>
+                    <br> Our Price: $55.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 4 (Keyboard 4) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/BWChromaV2.jpg" alt="Black Widow Chroma V2 Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Razer - BlackWidow Chroma V2 </span>
+                    <br> Yellow Mechanical Switches
+                    <br> Individually back lit keys with 16.8 million customizable color options
+                    <br> Ergonomic wrist rest
+                    <br> 10 key anti-ghosting
+                    <br> 5 dedicated macro keys
+                    <br><span class="text-danger"> List Price: <del> $229.00 </del></span>
+                    <br> Our Price: $189.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 5 (Keyboard 5) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/duckyshine7.jpg" alt="Ducky Shine 7 Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+                <!-- Column 6 (Keyboard 6) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/duckywhite.png" alt="Ducky White Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+                <!-- Column 7 (Keyboard 7) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/HuntsmanElite.png" alt="Hunstman Elite Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Razer - Huntsman Elite </span>
+                    <br> Opto-Mechanical Switch - Optical light sensor inside the switch with an actuation distance of 1.5 mm
+                    <br> Key Stabilizer Bar - For precise, balanced actuation with every key press
+                    <br> Magnetic Leatherette Wrist Rest - Made of plush leatherette for long lasting comfort
+                    <br> Features chroma enabled under-glow lighting for 20 customization zones
+                    <br> Multi-Function digital dial with three media keys - fully programmable
+                    <br> Adjust brightness and volume through hybrid on board memory and cloud storage
+                    <br><span class="text-danger"> List Price: <del> $200.00 </del></span>
+                    <br> Our Price: $170.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 8 (Keyboard 8) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/OrnataChroma.jpg" alt="Ornata Chroma Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Razer - Ornata Chroma </span>
+                    <br> Mecha-Membrane Keys - Soft cushioned membrane rubber dome with a crisp tactile mechanical click
+                    <br> Individually back lit Keys with 16.8 million customizable color options
+                    <br> Leatherette wrist rest - Ergonomic magnetic wrist rest for ultimate comfort
+                    <br> 10 key rollover anti-ghosting
+                    <br> Perfectly execute up to ten commands at the same time
+                    <br><span class="text-danger"> List Price: <del> $100.00 </del></span>
+                    <br> Our Price: $80.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 9 (Keyboard 9) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/duckywhite1.png" alt="Ducky White 1 Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+                <!-- Column 10 (Keyboard 10) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/G213.jpg" alt="G213 Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Logitech - G213 </span>
+                    <br> Brilliant Color Spectrum Illumination lets you easily personalize up to 5 lighting zones from over 16.8 million colors
+                    <br> Tactile performance keys tuned for gaming
+                    <br> Dedicated media control
+                    <br> Easily customize key lighting
+                    <br> 12 Function keys with custom commands
+                    <br><span class="text-danger"> List Price: <del> $69.00 </del></span>
+                    <br> Our Price: $45.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 11 (Keyboard 11) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/G910OrionSpark.jpg" alt="G910 Orion Spark Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Logitech - G910 Orion Spark </span>
+                    <br> World's fastest RGB mechanical gaming keyboard
+                    <br> Exclusive Romer-G Mechanical Switches with up to 25 percent faster actuation
+                    <br> Customizable RGB illumination - personalize individual key lighting from a palette of 16 million colors
+                    <br> Arx Control App and smartphone dock
+                    <br> 9 programmable G-keys - create custom game macros
+                    <br> Dedicated media controls
+                    <br><span class="text-danger"> List Price: <del> $179.00 </del></span>
+                    <br> Our Price: $130.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 12 (Keyboard 12) -->
+                <div class="col-md-12 mobileMarginTop mb-5">
+                    <img src="/images/GPro.JPG" alt="GPro Keyboard" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Logitech - G Pro </span>
+                    <br> Durable Romer G switches deliver 25 percent faster actuation than standard mechanical switches
+                    <br> Ultra portable sleek and compact design
+                    <br> Detachable Micro USB cables
+                    <br> Comes with three step angle adjustment and rubber feet for adequate stability during intense gaming
+                    <br><span class="text-danger"> List Price: <del> $130.00 </del></span>
+                    <br> Our Price: $110.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+            </div> 
+            <!-- End of row 1 -->
+            <!-- Start of Row 2 -->
+            <div class="row text-center g-0 mb-5">
+                <!-- Column 1 (Mouse 1) -->
+                <div class="col-md-12 mobileMarginTop mb-5">
+                    <img src="/images/Basilisk.jpg" alt="Basilisk Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Razer - Basilisk </span>
+                    <br> Features a dial for customizing scroll wheel resistance and a removable DPI clutch True 16,000 DPI 5G Optical sensor
+                    <br> Up to 450 IPS / 50 g acceleration
+                    <br> Razer Mechanical switch - durable up to 50 million clicks
+                    <br> Ergonomic form Factor
+                    <br> 16.8 million customizable color option. Customize the scroll wheel and Razer logo
+                    <br><span class="text-danger"> List Price: <del> $69.00 </del></span>
+                    <br> Our Price: $60.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 2 (Mouse 2) -->
+                <div class="col-md-6 mobileMarginTo mb-5">
+                    <img src="/images/DeathadderElite.jpg" alt="Deathadder Elite Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+                <!-- Column 3 (Mouse 3) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/LanceheadTE.jpg" alt="Lancehead TE Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Razer - Lancehead (Tournament Edition) </span>
+                    <br> Esports-grade optical sensor with 16,000 DPI and true tracking at 450 Inches Per Second
+                    <br> Omron switches optimized for the fastest response times for gaming and for durability up to 50 million clicks
+                    <br> Powered by Razer Synapse Pro (Beta) so you can save your settings onto the mouse as well as to the cloud
+                    <br> Ambidextrous form factor
+                    <br><span class="text-danger"> List Price: <del> $79.00 </del></span>
+                    <br> Our Price: $56.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 4 (Mouse 4) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/NagaTrinity.jpg" alt="Naga Trinity Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Razer - Naga Trinity </span>
+                    <br> True 16,000 DPI 5G Optical Sensor
+                    <br> Up to 450 IPS / 50 G acceleration
+                    <br> 3 interchangeable side plates with 2, 7 and 12-button configurations
+                    <br> Up to 19 fully programmable buttons
+                    <br> Enhanced right-handed form factor; 1000 Hz 16.8 million customizable color option
+                    <br><span class="text-danger"> List Price: <del> $99.00 </del></span>
+                    <br> Our Price: $74.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 5 (Mouse 5) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/G203Prodigy.jpg" alt="G203 Prodigy Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Logitech - G203 Prodigy </span>
+                    <br> Up to eight times faster response than standard mice
+                    <br> Advanced Button Tensioning reduces the force needed to click the left and right buttons
+                    <br> Cutting-edge 6000 dpi sensor gives you incredible accuracy, tracking speed, consistency and control
+                    <br><span class="text-danger"> List Price: <del> $39.00 </del></span>
+                    <br> Our Price: $27.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 6 (Mouse 6) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/G502Hero.jpg" alt="G502 Hero Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Logitech - G502 HERO </span>
+                    <br> High-performance Sensor - up to 16,000 DPI
+                    <br> 11 Customizable Buttons and Onboard Memory
+                    <br> Adjustable Weight System: Arrange up to five removable 3.6g weights
+                    <br> Programmable RGB Lighting - customize lighting from nearly 16.8 million colors
+                    <br> Mechanical Switch Button Tensioning: Metal spring tensioning system and pivot hinges
+                    <br><span class="text-danger"> List Price: <del> $79.00 </del></span>
+                    <br> Our Price: $65.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 7 (Mouse 7) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/G600.jpg" alt="G600 Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Logitech - G600 </span>
+                    <br> 20 MMO-tuned buttons - includes unique 12-button thumb panel
+                    <br> Low-friction polytetrafluoroethylene feet eliminate friction for smoother motions and improved accuracy
+                    <br> G-shift ring-finger button
+                    <br> Sculpted shape and tuned buttons reduce click fatigue during marathon multiplayer sessions
+                    <br> Total personalization
+                    <br><span class="text-danger"> List Price: <del> $79.00 </del></span>
+                    <br> Our Price: $40.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 8 (Mouse 8) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/mionix_castor_shark_fin_2.jpg" alt="Mionix Castor Shark Fin 2 Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+                <!-- Column 9 (Mouse 9) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/zowiefk1.jpg" alt="Zowie 1 Mouse" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+            </div> 
+            <!-- End of row 2 -->
+            <!-- Start of Row 3 -->
+            <div class="row text-center g-0 mb-5">
+                <!-- Column 1 (Headset 1) -->
+                <div class="col-md-12 mobileMarginTop mb-5">
+                    <img src="/images/CloudStinger.jpg" alt="Cloudstinger Headset" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> HyperX - Cloud Stinger </span>
+                    <br> Lightweight headset with 90-degree rotating ear cups
+                    <br> Sound pressure level - 102 ± 3dBSPL/mW at 1kHertz
+                    <br> 50mm directional drivers for Audio precision
+                    <br> Signature Memory foam
+                    <br> Adjustable steel Slider
+                    <br> Intuitive Volume control on headset ear cup
+                    <br> Swivel-to-mute noise-cancellation
+                    <br> Multi-platform compatibility
+                    <br><span class="text-danger"> List Price: <del> $49.00 </del></span>
+                    <br> Our Price: $30.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 2 (Headset 2) -->
+                <div class="col-md-12 mobileMarginTop mb-5">
+                    <img src="/images/G933ArtemisSpectrum.jpg" alt="G933 Artemis Spectrum Headset" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Logitech - G933 Artemis Spectrum </span>
+                    <br> Pro-GTM audio drivers deliver incredible audio
+                    <br> For all of your devices, including PCs, PS3s, PS4s, the Xbox One and any TV with powered USB or RCA audio
+                    <br> Up to 12 hours of wireless battery life without lighting or 8 hours with default lighting on a wireless connection
+                    <br> Also available with analog cable connections for unlimited connectivity
+                    <br> Plug in up to three devices (1 USB and 2 analog) to answer calls and play music while gaming
+                    <br> Customizable RGB lighting, swappable backlit custom tags, and 3 programmable G-keys
+                    <br><span class="text-danger"> List Price: <del> $199.00 </del></span>
+                    <br> Our Price: $109.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 3 (Headset 3) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/sennheisergsp500.jpg" alt="Sennheiser GSP500 Headset" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+                <!-- Column 4 (Headset 4) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/VoidPRO.jpg" alt="Void PRO Headset" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Corsair - VoidPRO </span>
+                    <br> Pro-GTM audio drivers deliver incredible audio
+                    <br> For all of your devices, including PCs, PS3s, PS4s, the Xbox One and any TV with powered USB or RCA audio
+                    <br> Up to 12 hours of wireless battery life without lighting or 8 hours with default lighting on a wireless connection
+                    <br> Also available with analog cable connections for unlimited connectivity
+                    <br> Plug in up to three devices (1 USB and 2 analog) to answer calls and play music while gaming
+                    <br> Customizable RGB lighting, swappable backlit custom tags, and 3 programmable G-keys
+                    <br><span class="text-danger"> List Price: <del> $79.00 </del></span>
+                    <br> Our Price: $70.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+            </div> 
+            <!-- End of row 3 -->
+            <!-- Start of Row 4 -->
+            <div class="row text-center g-0 mb-5">
+                <!-- Column 1 (Monitor 1) -->
+                <div class="col-md-12 mobileMarginTop mb-5">
+                    <img src="/images/GL2760H.JPG" alt="GL 2760H Monitor" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> BenQ - GL2760H </span>
+                    <br> 2ms response time for lightning fast gaming performance and ZeroFlicker technology
+                    <br> Low Blue Light Technology filters out harmful blue light, effectively diminishing eye fatigue and irritation
+                    <br> Ultra High Contrast Ratio - spectacular 12M:1 dynamic contrast ratio
+                    <br> Connectivity - D-sub, DVI. HDMI, headphone jack
+                    <br> Refresh Rate 60Hz
+                    <br> Tilt (down/up): -5˚ - 20˚. OS
+                    <br><span class="text-danger"> List Price: <del> $149.00 </del></span>
+                    <br> Our Price: $125.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 2 (Monitor 2) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/Optix.jpg" alt="Optix Monitor" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> MSI - Optix </span>
+                    <br> Curved gaming display (1800R)
+                    <br> 144Hz refresh rate - Real smooth gaming
+                    <br> 1ms response time
+                    <br> Gaming OSD
+                    <br> Adaptive Sync
+                    <br><span class="text-danger"> List Price: <del> $299.00 </del></span>
+                    <br> Our Price: $265.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 3 (Monitor 3) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/ROGStrix.jpg" alt="ROGStrix Monitor" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Asus - ROG Strix </span>
+                    <br> 27” Full HD (1920 x 1080)
+                    <br> Curved gaming monitor with ASUS Eye Care technology
+                    <br> 144Hz refresh rate and AMD FreeSync
+                    <br> Marathon ready with swivel, tilt and height adjustability and VESA mount
+                    <br> Exclusive GamePlus and GameVisual now with new MOBA mode for color enhancements
+                    <br> Enhanced customization featuring - RGB lighting on the back and LED lighting projection in the base
+                    <br><span class="text-danger"> List Price: <del> $349.00 </del></span>
+                    <br> Our Price: $300.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+            </div> 
+            <!-- End of row 4 -->
+            <!-- Start of Row 5 -->
+            <div class="row text-center g-0 mb-5">
+                <!-- Column 1 (Controller 1) -->
+                <div class="col-md-12 mobileMarginTop mb-5">
+                    <img src="/images/DualShock4WirelessController.JPG" alt="PS Dual Shock 4 Wireless Controller" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Sony - DualShock 4 Wireless Controller </span>
+                    <br> Dual analog sticks and trigger buttons have been improved to provide a greater sense of control
+                    <br> New multi-touch and clickable touch pad on the face of the DualShock 4 Wireless Controller
+                    <br> DualShock 4 Wireless Controller features a built-in speaker and stereo headset jack
+                    <br><span class="text-danger"> List Price: <del> $49.00 </del></span>
+                    <br> Our Price: $38.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+                <!-- Column 2 (Controller 2) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/logitech_f310.jpg" alt="Logitech F310 Controller" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> OUT OF STOCK </span>
+                </div>
+                <!-- Column 3 (Controller 3) -->
+                <div class="col-md-6 mobileMarginTop mb-5">
+                    <img src="/images/XboxWirelessController.jpg" alt="Xbox Wireless Controller" class="mb-2">
+                    <br><span class="fontMedium fw-bold"> Microsoft - Xbox Wireless Controller </span>
+                    <br> Experience the enhanced comfort and feel of the Xbox Wireless Controller
+                    <br> Features a dark grey design with light grey and blue accents
+                    <br> Plug in any compatible headset with the 3.5mm stereo headset jack
+                    <br> Stay on target with textured grip
+                    <br> Includes Bluetooth technology for gaming on Windows 10 PCs and tablets
+                    <br><span class="text-danger"> List Price: <del> $49.00 </del></span>
+                    <br> Our Price: $38.00
+                    <a class="container d-flex btn btn-warning justify-content-center w-30" 
+                        role="button"> Add To Cart <i class="fa-solid fa-cart-shopping ms-2"></i>
+                    </a>
+                </div>
+            </div> 
+            <!-- End of row 5 -->
+        </div>
+        <!-- End of products -->
+
+
+        <!-- Footer -->
+        <div class="bg-dark pinkFont text-center mt-auto">
+	        <footer>
+			    <div class="container mt-5 mb-5">
+                    <!-- Start of row -->
+				    <div class="row">
+                        <!-- Column 1 -->
+					    <div class="col-lg-3 col-md-6 col-12">
+                            <div>
+                                <a href="index.html" ><img src="images/OSGLogo.png" alt="One Stop Gaming Logo" class="w-30 h-30"></a>
+                            </div>
+                            <p><br> Got a Question? Call us 24/7 <br> (800) BUY-GEAR </p>
+					    </div>
+                        <!-- Column 2 -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <h4> Information </h4>
+                                <!-- list-unstyled: Remove bullet points from list -->
+                                <ul class="list-unstyled">
+                                    <!-- 
+                                        Text-decoration-none: remove underline from links
+                                        Text-reset: Make the text color the same as the parent container 
+                                        (unless you want to change the link color to something else)
+                                    -->
+                                    <li><a href="about.html" class="text-decoration-none purpleLinks"> About Us </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Terms & Conditions </a></li>
+                                    <li><a href="contact.html" class="text-decoration-none purpleLinks"> Contact Us </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Help </a></li>
+                                </ul>
+                        </div>
+                        <!-- Column 3 -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <h4> Customer Service </h4>
+                                <ul class="list-unstyled">
+                                    <li> Payment Methods </li>
+                                    <!-- Nested "ul" lists MUST be wrapped in a "li" tag in order to avoid error -->
+                                    <li>
+                                        <ul class="list-group list-group-horizontal list-unstyled justify-content-center text-white-50">
+                                            <li><i class="fa-2x fa-brands fa-cc-visa me-2"></i></li>
+                                            <li><i class="fa-2x fa-brands fa-cc-mastercard me-2"></i></li>
+                                            <li><i class="fa-2x fa-brands fa-cc-paypal me-2"></i></li>
+                                            <li><i class="fa-2x fa-brands fa-cc-apple-pay me-2"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Returns </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Shipping </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Privacy Policy </a></li>
+                                </ul>
+					    </div>
+                        <!-- Column 4 -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <h4 class="me-3"> Follow Us </h4>
+                                <ul class="list-group list-group-horizontal list-unstyled justify-content-center">
+                                    <!-- Adding the attribute '' means "open this link in a new tab" -->
+                                    <!-- You MUST add the attribute 'rel="noopener noreferrer"' to a "target" attribute to make 
+                                            the link secure when leaving the home domain -->
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-facebook me-2 purpleLinks"></i></a></li>
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-twitter me-2 purpleLinks"></i></a></li>
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-tiktok me-2 purpleLinks"></i></a></li>
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-square-instagram me-2 purpleLinks"></i></a></li>
+                                </ul>
+                        </div>   
+			        </div>
+                    <!-- End of row -->
+                </div>
+                <!-- End top footer -->
+
+                <!-- Copyright -->
+                <div class="container col-lg-6 col-12 justify-content-center mb-2">
+                    <div>
+                        <p> Copyright © 2018 <a href="index.html" class="text-decoration-none purpleLinks"> One Stop Gaming </a>  
+                            -  All Rights Reserved </p>
+                    </div>
+                </div>
+                <!-- End copyright -->
+	        </footer>
+        </div>
+        <!-- End of footer -->
+    </body>
+</html>

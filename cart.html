@@ -1,0 +1,271 @@
+<!-- Use the website "https://validator.w3.org/#validate_by_input", to check for errors in the code -->
+<!-- ALWAYS CHECK FOR ERRORS USING THE ONLINE VALIDATOR !!! -->
+
+<!-- Courtney Ferone - Project #2 One Stop Gaming Ecommerce Site -->
+
+<!DOCTYPE html> <!-- Defines the document to be HTML  -->
+<html lang="en"> <!-- The beginning of our code, attribute "lang" is added to define the language of the page to be "en(English)" -->
+    <head> <!-- The elements in the "head" meta tag do NOT appear under the URL on the page -->
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Google Fonts plugin: "Questrial"-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        <!-- Addition of Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- Adding FontAwesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+                integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+                crossorigin="anonymous" referrerpolicy="no-referrer">
+        <!-- My custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <!-- The <title> appears as the name of the page (shown on the tab) -->
+        <title> One Stop Gaming </title>
+    </head>
+
+    <!-- Flexbox is used to grant certain page effects (like flushing the footer to the bottom of the page) -->
+    <body class="d-flex flex-column min-vh-100">
+        <!-- JavaScript: Bootstrap bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Header -->
+        <header>
+            <!-- Top navbar -->
+            <nav class="navbar bg-light navbar-light">
+                <div class="container justify-content-center">
+                    <!-- Left side -->
+                    <div class="col-lg-5 col-md-2 col-auto">
+                        <ul class="navbar-brand navbar-nav justify-content-sm-start">
+                            <li><i class="fa-solid fa-envelope text-dark"></i> OneStopGaming@gmail.com </li>
+                        </ul>
+                    </div>
+                    <!-- Right side -->
+                    <div class="col-lg-7 col-md-8 col-auto">
+                        <ul class="navbar-brand navbar-nav list-group list-group-horizontal justify-content-sm-end">
+                            <li><i class="fa-solid fa-circle-user text-dark"></i>
+                                <a href="" class="text-decoration-none text-reset me-5"> My account </a></li> 
+                            <li><i class="fa-solid fa-power-off text-dark"></i>
+                                <a href="" class="text-decoration-none text-reset"> Login </a></li> 
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End top navbar-->
+            
+            <!-- Middle header -->
+            <div class="container d-flex justify-content-center col-lg-8 col-md-7 col-12 my-4 w-100" style="height:50px">
+                <!-- Category Selection Menu -->
+                <select class="form-select w-13 me-1">
+                    <option selected="selected" class="text-center"> All Categories </option>
+                    <option value="1" class="text-start"> Keyboards </option>
+                    <option value="2" class="text-start"> Mice </option>
+                    <option value="3" class="text-start"> Headsets </option>
+                    <option value="4" class="text-start"> Monitors </option>
+                    <option value="5" class="text-start"> Controllers </option>
+                </select>
+                <!-- Search by Name -->
+                <div class="input-group rounded w-30 d-flex justify-content-center align-items-center">
+                    <input 
+                        type="search" 
+                        class="form-control rounded text-center"
+                        style="height:50px" 
+                        placeholder="Search Products Here" 
+                        aria-label="Search" 
+                    >
+                    <button type="button" class="btn border px-3 ms-1" style="height:50px">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button> 
+                </div>
+            </div>
+            <!-- End middle header -->
+
+            <!-- Bottom navbar -->
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <div class="container">
+                    <!-- Hamburger menu button when collapsed -->
+                    <button 
+                        class="container navbar-toggler w-30"
+                        type="button"
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#bottomNavDropdown"
+                        aria-controls="bottomNavDropdown"
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="bottomNavDropdown">
+                        <ul class="container nav nav-pills navbar-nav navbar-brand justify-content-center align-items-center">
+                            <li class="nav-item">
+                                <a href="index.html" 
+                                    class="text-decoration-none me-3 purpleLinks"> 
+                                    Home 
+                                </a>
+                            </li>
+                            <li>   
+                                <a href="about.html" 
+                                    class="text-decoration-none me-3 purpleLinks"> 
+                                    About 
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle me-3" 
+                                    href="#" 
+                                    id="bottomNavDropdownMenuLink" 
+                                    role="button"
+                                    data-bs-toggle="dropdown" 
+                                    aria-expanded="false" 
+                                    style="color:#D36EE5"> 
+                                    Products
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="bottomNavDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="allProducts.html" style="color:#D36EE5"> All Products </a></li>
+                                    <li><a class="dropdown-item" href="keyboards.html" style="color:#D36EE5"> Keyboards </a></li>
+                                    <li><a class="dropdown-item" href="mice.html" style="color:#D36EE5"> Mice </a></li>
+                                    <li><a class="dropdown-item" href="headsets.html" style="color:#D36EE5"> Headsets </a></li>
+                                    <li><a class="dropdown-item" href="monitors.html" style="color:#D36EE5"> Monitors </a></li>
+                                    <li><a class="dropdown-item" href="controllers.html" style="color:#D36EE5"> Controllers </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="nav-link active me-3 px-2 text-dark" style="background-color:#D36EE5"> Cart </a></li>
+                            <li><a href="checkout.html" class="text-decoration-none me-3 purpleLinks"> Checkout </a></li>
+                            <li><a href="contact.html" class="text-decoration-none me-3 purpleLinks"> Contact Us </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End bottom navbar -->
+        </header>
+        <!-- End of header -->
+
+
+        <!-- Cart -->
+        <div class="container mt-3 w-50 align-items-center">
+            <p class="text-center fontBig animate__animated animate__fadeInDown animate__delay-1s shadow-lg border-top borderStyle"> 
+                Cart </p>
+        </div>
+        <!-- Static Cart Grid  -->
+        <div class="container w-50 mb-5 galleryImages fontSmMd">
+            <!-- Start of the row -->
+            <div class="row text-center g-0">
+                <!-- Column 1 (Static Cart - Item 1)-->
+                <div class="col-md-12 mobileMarginTop">
+                    x1 Razer - BlackWidow Chroma V2 = $189.00
+                    <a class="cartImages" 
+                        href="keyboards.html" 
+                        target="_blank">
+                        <img src="images/BWChromaV2.jpg" alt="Razer - BlackWidow Chroma V2 Keyboard">
+                    </a>
+                </div>
+                <!-- Column 2 (Static Cart - Item 2)-->
+                <div class="col-md-12 mobileMarginTop">
+                    x1 Logitech - G502 HERO = $65.00
+                    <a class="cartImages" 
+                        href="mice.html" 
+                        target="_blank">
+                        <img src="images/G502Hero.jpg" alt="Logitech - G502 HERO Mouse">
+                    </a>
+                </div>
+                <!-- Column 3 (Checkout Button)-->
+                <div class="col-md-12 mobileMarginTop">
+                    <hr><div class="text-center mb-2"> Total = $254.00 </div>
+                    <a class="container d-flex btn btn-primary justify-content-center w-30" 
+                        href="checkout.html"                      
+                        role="button"> Checkout 
+                    </a>
+                </div> 
+            </div> 
+            <!-- End of row -->
+        </div>
+        <!-- End of cart -->
+
+
+        <!-- Footer -->
+        <div class="bg-dark pinkFont text-center mt-auto">
+	        <footer>
+			    <div class="container mt-5 mb-5">
+                    <!-- Start of row -->
+				    <div class="row">
+                        <!-- Column 1 -->
+					    <div class="col-lg-3 col-md-6 col-12">
+                            <div>
+                                <a href="index.html"><img src="images/OSGLogo.png" alt="One Stop Gaming Logo" class="w-30 h-30"></a>
+                            </div>
+                            <p><br> Got a Question? Call us 24/7 <br> (800) BUY-GEAR </p>
+					    </div>
+                        <!-- Column 2 -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <h4> Information </h4>
+                                <!-- list-unstyled: Remove bullet points from list -->
+                                <ul class="list-unstyled">
+                                    <!-- 
+                                        Text-decoration-none: remove underline from links
+                                        Text-reset: Make the text color the same as the parent container 
+                                        (unless you want to change the link color to something else)
+                                    -->
+                                    <li><a href="about.html" class="text-decoration-none purpleLinks"> About Us </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Terms & Conditions </a></li>
+                                    <li><a href="contact.html" class="text-decoration-none purpleLinks"> Contact Us </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Help </a></li>
+                                </ul>
+                        </div>
+                        <!-- Column 3 -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <h4> Customer Service </h4>
+                                <ul class="list-unstyled">
+                                    <li> Payment Methods </li>
+                                    <!-- Nested "ul" lists MUST be wrapped in a "li" tag in order to avoid error -->
+                                    <li>
+                                        <ul class="list-group list-group-horizontal list-unstyled justify-content-center text-white-50">
+                                            <li><i class="fa-2x fa-brands fa-cc-visa me-2"></i></li>
+                                            <li><i class="fa-2x fa-brands fa-cc-mastercard me-2"></i></li>
+                                            <li><i class="fa-2x fa-brands fa-cc-paypal me-2"></i></li>
+                                            <li><i class="fa-2x fa-brands fa-cc-apple-pay me-2"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Returns </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Shipping </a></li>
+                                    <li><a href="#" class="text-decoration-none purpleLinks"> Privacy Policy </a></li>
+                                </ul>
+					    </div>
+                        <!-- Column 4 -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <h4 class="me-3"> Follow Us </h4>
+                                <ul class="list-group list-group-horizontal list-unstyled justify-content-center">
+                                    <!-- Adding the attribute '' means "open this link in a new tab" -->
+                                    <!-- You MUST add the attribute 'rel="noopener noreferrer"' to a "target" attribute to make 
+                                            the link secure when leaving the home domain -->
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-facebook me-2 purpleLinks"></i></a></li>
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-twitter me-2 purpleLinks"></i></a></li>
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-tiktok me-2 purpleLinks"></i></a></li>
+                                    <li><a href="#" rel="noopener noreferrer">
+                                        <i class="fa-2x fa-brands fa-square-instagram me-2 purpleLinks"></i></a></li>
+                                </ul>
+                        </div>   
+			        </div>
+                    <!-- End of row -->
+                </div>
+                <!-- End top footer -->
+
+                <!-- Copyright -->
+                <div class="container col-lg-6 col-12 justify-content-center mb-2">
+                    <div>
+                        <p> Copyright © 2018 <a href="index.html" class="text-decoration-none purpleLinks"> One Stop Gaming </a>  
+                            -  All Rights Reserved </p>
+                    </div>
+                </div>
+                <!-- End copyright -->
+	        </footer>
+        </div>
+        <!-- End of footer -->
+    </body>
+</html>
